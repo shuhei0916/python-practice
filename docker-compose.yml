@@ -1,0 +1,17 @@
+# version: '3' # バージョンについてはより新しいものがあるかも。要確認。
+
+# services:
+#   app:
+#     container_name: python-practice-app
+#     build: .
+#     volumes: # yamlの書き方あんまわかってないです
+#       - ./src:/app/src
+#       - ./tests:/app/tests
+#     environment:
+#       - PYTHONUNBUFFERED=1
+#     command: /bin/bash
+#     stdin_open: true  # docker run -i に相当
+#     tty: true         # docker run -t に相当
+
+# ymlについてはbashに入る方法がいまひとつわからんのでいったん断念。
+# とりあえずはcontainer runコマンドを手打ちで実行することにします。
