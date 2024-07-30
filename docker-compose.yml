@@ -1,17 +1,18 @@
-# version: '3' # バージョンについてはより新しいものがあるかも。要確認。
-
 # services:
 #   app:
-#     container_name: python-practice-app
-#     build: .
-#     volumes: # yamlの書き方あんまわかってないです
-#       - ./src:/app/src
-#       - ./tests:/app/tests
+#     build: .  # 現在のディレクトリにあるDockerfileを使ってイメージをビルド
+#     container_name: app
 #     environment:
-#       - PYTHONUNBUFFERED=1
-#     command: /bin/bash
-#     stdin_open: true  # docker run -i に相当
-#     tty: true         # docker run -t に相当
+#       - PYTHONUNBUFFERED=1  # Pythonの標準出力をバッファリングしない設定
+#     command: /bin/bash  # コンテナ起動時に/bin/bashを実行
+#     volumes:
+#       - ./src:/app/src  # srcディレクトリをコンテナ内の/app/srcにマウント
+#       - ./tests:/app/tests  # testsディレクトリをコンテナ内の/app/testsにマウント
+#       - ./data:/app/data  # dataディレクトリをコンテナ内の/app/dataにマウント
+#     tty: true  # TTYモードを有効にする
+#     stdin_open: true  # 標準入力を開いたままにする
+
 
 # ymlについてはbashに入る方法がいまひとつわからんのでいったん断念。
-# とりあえずはcontainer runコマンドを手打ちで実行することにします。
+# とりあえずは 以下のcontainer runコマンドを手打ちで実行することにします。
+#  docker container run --name app --rm --interactive --tty --volume $(pwd)/src:/app/src --volume $(pwd)/tests:/app/tests python-practice bash
