@@ -15,4 +15,7 @@
 
 # ymlについてはbashに入る方法がいまひとつわからんのでいったん断念。
 # とりあえずは 以下のcontainer runコマンドを手打ちで実行することにします。
-#  docker container run --name app --rm --interactive --tty --volume $(pwd)/src:/app/src --volume $(pwd)/tests:/app/tests python-practice bash
+# docker container run --name app --rm --interactive --tty --volume $(pwd)/src:/app/src --volume $(pwd)/tests:/app/tests --volume $(pwd)/data:/data python-practice bash
+
+# サードパーティライブラリを新しくインストールするため、requirement.txtを書き換えた場合などは、以下のコマンドでイメージをリビルドしてください
+# docker image build --tag python-practice .
