@@ -1,2 +1,2 @@
-def fib(n):
+def fib(num):
     return 0

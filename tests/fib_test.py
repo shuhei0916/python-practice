@@ -9,9 +9,7 @@ from  fib import fib
 
 class TestFibonacci(unittest.TestCase):       
     def test_fibonacci_zero(self):
-        actual = fib(0)
-        expected = 0
-        self.assertEqual(actual, expected)
+        self.assertEqual(fib(0), 0)
         
     # def test_fibonacci_zerojjjjjj(self):
     #     actual = fib(0)
