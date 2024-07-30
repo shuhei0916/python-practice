@@ -11,10 +11,8 @@ class TestFibonacci(unittest.TestCase):
     def test_fibonacci_zero(self):
         self.assertEqual(fib(0), 0)
         
-    # def test_fibonacci_zerojjjjjj(self):
-    #     actual = fib(0)
-    #     expected = 0
-    #     self.assertEqual(actual, expected)
-
+    def test_fibonacci_one(self):
+        self.assertEqual(fib(1), 1)
+ 
 if __name__ == '__main__':
     unittest.main()
