@@ -14,10 +14,12 @@ class TestFibonacci(unittest.TestCase):
     def test_fibonacci_one(self):
         self.assertEqual(fib(1), 1)
         
-    def test_fibonacci_second(self):
+    def test_fibonacci_two(self):  
         self.assertEqual(fib(2), 1)
 
- 
+    def test_fibonacci_three(self):  
+        self.assertEqual(fib(3), 2)
+
  
 if __name__ == '__main__':
     unittest.main()
