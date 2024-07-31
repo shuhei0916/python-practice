@@ -1,16 +1,16 @@
-# services:
-#   app:
-#     build: .  # 現在のディレクトリにあるDockerfileを使ってイメージをビルド
-#     container_name: app
-#     environment:
-#       - PYTHONUNBUFFERED=1  # Pythonの標準出力をバッファリングしない設定
-#     command: /bin/bash  # コンテナ起動時に/bin/bashを実行
-#     volumes:
-#       - ./src:/app/src  # srcディレクトリをコンテナ内の/app/srcにマウント
-#       - ./tests:/app/tests  # testsディレクトリをコンテナ内の/app/testsにマウント
-#       - ./data:/app/data  # dataディレクトリをコンテナ内の/app/dataにマウント
-#     tty: true  # TTYモードを有効にする
-#     stdin_open: true  # 標準入力を開いたままにする
+services:
+  app:
+    build: .  # 現在のディレクトリにあるDockerfileを使ってイメージをビルド
+    container_name: app
+    environment:
+      - PYTHONUNBUFFERED=1  # Pythonの標準出力をバッファリングしない設定
+    command: /bin/bash  # コンテナ起動時に/bin/bashを実行
+    volumes:
+      - ./src:/app/src  # srcディレクトリをコンテナ内の/app/srcにマウント
+      - ./tests:/app/tests  # testsディレクトリをコンテナ内の/app/testsにマウント
+      - ./data:/app/data  # dataディレクトリをコンテナ内の/app/dataにマウント
+    tty: true  # TTYモードを有効にする
+    stdin_open: true  # 標準入力を開いたままにする
 
 
 # ymlについてはbashに入る方法がいまひとつわからんのでいったん断念。
