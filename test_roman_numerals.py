@@ -3,9 +3,10 @@ from roman_numerals import to_roman
 
 class TestRomanNumerals(unittest.TestCase):
     def test_to_roman(self):
-        expected = "I"
-        actual = to_roman(1)
-        self.assertEqual(expected, actual)
+        self.assertEqual("I", to_roman(1))
+        
+    # def test_five(self): 
+        
 
 if __name__ == '__main__':
     unittest.main()
