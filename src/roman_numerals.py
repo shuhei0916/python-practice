@@ -3,4 +3,7 @@ def to_roman(num):
                  5: "V",
                  10: "X"}
     
-    return roman_map[num]
+    if num in roman_map:
+        return roman_map[num]
+    else:
+        return "II"
