@@ -12,8 +12,10 @@ from roman_numerals import to_roman
 class TestRomanNumerals(unittest.TestCase):
     @parameterized.expand([ # parameterizedテストの書き方はまだ今一つ分かっていない部分があるので勉強する
         ("test_to_roman_one", 1, "I"),
-        ("test_to_roman_two", 2, "II"),        
+        ("test_to_roman_two", 2, "II"),    
+        ("test_to_roman_three", 3, "III"),            
         ("test_to_roman_five", 5, "V"),
+        ("test_to_roman_six", 6, "VI"),
         ("test_to_roman_ten", 10, "X"),  
               
     ])
