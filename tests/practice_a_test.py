@@ -8,7 +8,7 @@ from practice_a import print_abc
 
 class TestPracticeA(unittest.TestCase):
     def test1(self):
-        self.fail("hoge")
+        self.
 
 if __name__ == '__main__':
     unittest.main()
