@@ -1,22 +1,3 @@
 # TODO
 
-##  アラビア数字をローマ数字に変換する関数to_roman()を作成する
-
- <!-- - [ ] きりのいい数字の時は1, 5, 10などを返す -->
-- [x] 1の時はIを返す
-- [x] 5の時はVを返す
-- [x] 10の時はXを返す
-- [x] 2の時はIIを返す
-- [x] 3の時はIIIを返す
-- [x] 6の時はVIを返す
-- [ ] 4の時はIVを返す
-
-
-## Atcoderの練習
-
-- [ ] 1
-    2 3
-    test
-    の時は、
-    6 test
-    と返す
+- [ ] unittestのdiscoverサブコマンドについて学ぶ（[unittest --- ユニットテストフレームワーク](https://docs.python.org/ja/3/library/unittest.html#test-discovery)
