@@ -3,10 +3,12 @@ import sys
 import os
 from parameterized import parameterized
 
-# srcディレクトリをパスに追加（本来的なやり方なのか？調査する）
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
+# # srcディレクトリをパスに追加（本来的なやり方なのか？調査する）
+# sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
 
-from roman_numerals import to_roman
+# from roman_numerals import to_roman
+
+from src.roman_numerals import to_roman
 
 
 class TestRomanNumerals(unittest.TestCase):
@@ -17,7 +19,6 @@ class TestRomanNumerals(unittest.TestCase):
         ("test_to_roman_five", 5, "V"),
         ("test_to_roman_six", 6, "VI"),
         ("test_to_roman_ten", 10, "X"),  
-              
     ])
     def test_to_roman(self, name, n, expected):
         self.assertEqual(to_roman(n), expected)
