@@ -14,7 +14,7 @@ class TestPandasBasics(unittest.TestCase):
         expected = np.array([[0, 1, 2, 3],
                              [4, 5, 6, 7],
                              [8, 9, 10, 11]])
-        # self.assertEqual(actual, expected)
+        # self.assertEqual(actual, expected) # これだとエラー!
         np.testing.assert_array_equal(actual, expected)
         
 if __name__ == '__main__':
