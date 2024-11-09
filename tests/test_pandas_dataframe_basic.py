@@ -20,10 +20,6 @@ class TestPandasBasics(unittest.TestCase):
     def test_values_type(self):
         self.assertIsInstance(self.df_simple.values, np.ndarray)
         
-class TestExample(unittest.TestCase):
-    def test_is_instance(self):
-        num = 10
-        self.assertIsInstance(num, int)
         
         
 if __name__ == '__main__':
