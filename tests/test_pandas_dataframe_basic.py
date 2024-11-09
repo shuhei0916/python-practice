@@ -17,15 +17,13 @@ class TestPandasBasics(unittest.TestCase):
         # self.assertEqual(actual, expected) # これだとエラー!
         np.testing.assert_array_equal(actual, expected)
     
-    def test_df_values(self):
-        actual = 'numpy'
-        # self.assertEqual()
+    def test_values_type(self):
+        self.assertIsInstance(self.df_simple.values, np.ndarray)
         
 class TestExample(unittest.TestCase):
     def test_is_instance(self):
         num = 10
         self.assertIsInstance(num, int)
-        self.assertIsInstance(num, float)
         
         
 if __name__ == '__main__':
