@@ -19,8 +19,14 @@ class TestPandasBasics(unittest.TestCase):
     
     def test_df_values(self):
         actual = 'numpy'
-        self.assertEqual()
-
+        # self.assertEqual()
+        
+class TestExample(unittest.TestCase):
+    def test_is_instance(self):
+        num = 10
+        self.assertIsInstance(num, int)
+        self.assertIsInstance(num, float)
+        
         
 if __name__ == '__main__':
     unittest.main()
