@@ -16,6 +16,11 @@ class TestPandasBasics(unittest.TestCase):
                              [8, 9, 10, 11]])
         # self.assertEqual(actual, expected) # これだとエラー!
         np.testing.assert_array_equal(actual, expected)
+    
+    def test_df_values(self):
+        actual = 'numpy'
+        self.assertEqual()
+
         
 if __name__ == '__main__':
     unittest.main()
