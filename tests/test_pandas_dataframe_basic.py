@@ -5,6 +5,9 @@ import numpy as np
 class TestPandasBasics(unittest.TestCase):
     def setUp(self):
         self.df_simple = pd.DataFrame(np.arange(12).reshape(3, 4))
+        self.df = pd.DataFrame(np.arange(12).reshape(3, 4), 
+                               columns=['col_0', 'col_1', 'col_2', 'col_3'],
+                               index=['row_0', 'row_1', 'row_2'])
         
     def test_version(self):
         self.assertEqual(pd.__version__, '2.2.3') 
