@@ -23,6 +23,12 @@ class TestPandasBasics(unittest.TestCase):
     def test_values_type(self):
         self.assertIsInstance(self.df_simple.values, np.ndarray)
         
+    def test_df_colums(self):
+        self.assertIsInstance(self.df.columns, pd.core.indexes.base.Index)
+        
+        actual = self.df.columns.tolist()
+        expected = ['col_0', 'col_1', 'col_2', 'col_3']
+        np.testing.assert_array_equal(actual, expected)
         
         
 if __name__ == '__main__':
