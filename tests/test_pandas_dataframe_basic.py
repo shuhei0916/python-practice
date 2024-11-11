@@ -4,8 +4,9 @@ import numpy as np
 
 class TestPandasBasics(unittest.TestCase):
     def setUp(self):
-        self.df_simple = pd.DataFrame(np.arange(12).reshape(3, 4))
-        self.df = pd.DataFrame(np.arange(12).reshape(3, 4), 
+        number_array = np.arange(12).reshape(3, 4)
+        self.df_simple = pd.DataFrame(number_array)
+        self.df = pd.DataFrame(number_array, 
                                columns=['col_0', 'col_1', 'col_2', 'col_3'],
                                index=['row_0', 'row_1', 'row_2'])
         
