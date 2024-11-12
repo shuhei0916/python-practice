@@ -14,6 +14,9 @@ class TestPandasBasics(unittest.TestCase):
         # クラスレベルのデータを使用してDataFrameを作成
         self.df_simple = pd.DataFrame(self.number_array)
         self.df = pd.DataFrame(self.number_array, columns=self.columns, index=self.index)
+        self.df_multi = pd.DataFrame({'col_0': [0, 1, 2], 
+                                      'col_1': [0.0, 0.1, 0.2], 
+                                      'col_2': ['A', 'B', 'C']})
 
     def test_dataframe_values_content(self):
         # DataFrameの値が期待通りであることをテスト
@@ -36,6 +39,15 @@ class TestPandasBasics(unittest.TestCase):
     def test_df_columns_type(self):
         # dfのカラム名の型がIndexであることをテスト
         self.assertIsInstance(self.df.columns, pd.Index, "df.columnsはpd.Index型ではありません")
+
+    def test_df_col_1_type(self):
+        self.assertIsInstance(self.df['col_1'], pd.core.series.Series)
+        
+    def test_df_elem(self):
+        self.assertEqual(self.df.at['row_0', 'col_1'], 1)
+        
+    def test_df_multi_types(self):
+        self.assertEqual(self.df_multi['col_1'].dtype, np.float64)
 
 if __name__ == '__main__':
     unittest.main()
